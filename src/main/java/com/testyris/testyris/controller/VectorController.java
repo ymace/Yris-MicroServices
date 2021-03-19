@@ -143,4 +143,11 @@ public class VectorController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping(value="/ping", method= RequestMethod.GET)
+    public ResponseEntity<String> ping() {
+        return new ResponseEntity<>("pong", HttpStatus.OK);
+    }
+
+
 }
